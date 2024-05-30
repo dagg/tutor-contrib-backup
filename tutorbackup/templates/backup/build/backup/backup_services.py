@@ -15,7 +15,7 @@ from botocore.exceptions import ClientError
 
 ENV = os.environ
 
-DUMP_DIRECTORY = '/data'
+DUMP_DIRECTORY = '/data/backup'
 
 MYSQL_DUMPFILE = os.path.join(DUMP_DIRECTORY, 'mysql_dump.sql')
 MONGODB_DUMPDIR = os.path.join(DUMP_DIRECTORY, 'mongodb_dump')
