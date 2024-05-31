@@ -253,6 +253,14 @@ def main(exclude, upload):
 
     archive(paths)
 
+    logger.info("Removing files and dirs after archiving them")
+    for path in paths:
+        if os.path.isfile(path):
+            os.remove(path)
+        if os.path.isdir(path):
+            shutil.rmtree(path)
+    logger.info("Files and Dirs removed")
+
     if upload:
         upload_to_s3()
 
